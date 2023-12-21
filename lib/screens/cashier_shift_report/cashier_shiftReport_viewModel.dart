@@ -2,14 +2,14 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:ismmart_dubai_pos/helper/api_base_helper.dart';
-import 'package:ismmart_dubai_pos/helper/constants.dart';
-import 'package:ismmart_dubai_pos/helper/global_variables.dart';
-import 'package:ismmart_dubai_pos/helper/theme_helper.dart';
-import 'package:ismmart_dubai_pos/screens/cashier_shift_report/shift_report_order_model.dart';
+import 'package:ismmart_qatar_pos/screens/cashier_shift_report/shift_report_order_model.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
+import '../../helper/api_base_helper.dart';
+import '../../helper/constants.dart';
+import '../../helper/global_variables.dart';
+import '../../helper/theme_helper.dart';
 import '../../helper/urls.dart';
 
 class CashierShiftReportViewModel extends GetxController {

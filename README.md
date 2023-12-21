@@ -1,4 +1,4 @@
-# ismmart_dubai_pos
+# ismmart_qatar_pos
 
 A new Flutter project.
 

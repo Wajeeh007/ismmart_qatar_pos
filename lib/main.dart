@@ -1,13 +1,12 @@
 import 'dart:io';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:ismmart_dubai_pos/screens/home/home_view.dart';
-import 'package:ismmart_dubai_pos/screens/login/login_view.dart';
-import 'package:ismmart_dubai_pos/screens/order_history/order_history_view.dart';
-import 'package:ismmart_dubai_pos/screens/order_history_detail/order_history_detail_view.dart';
+import 'package:ismmart_qatar_pos/screens/home/home_view.dart';
+import 'package:ismmart_qatar_pos/screens/login/login_view.dart';
+import 'package:ismmart_qatar_pos/screens/order_history/order_history_view.dart';
+import 'package:ismmart_qatar_pos/screens/order_history_detail/order_history_detail_view.dart';
 import 'package:window_manager/window_manager.dart';
 
 import 'helper/theme_helper.dart';

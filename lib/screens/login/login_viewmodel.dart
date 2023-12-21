@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:ismmart_dubai_pos/helper/global_variables.dart';
 import '../../helper/api_base_helper.dart';
 import '../../helper/constants.dart';
+import '../../helper/global_variables.dart';
 import '../../helper/urls.dart';
 import '../home/home_view.dart';
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ismmart_dubai_pos/screens/sales_summary/sales_summary_viewmodel.dart';
-import 'package:ismmart_dubai_pos/widgets/loader_view.dart';
+import 'package:ismmart_qatar_pos/widgets/loader_view.dart';
 import 'package:pdf/pdf.dart';
 import 'package:printing/printing.dart';
+import 'sales_summary_viewmodel.dart';
 
 class SalesSummaryView extends StatelessWidget {
   SalesSummaryView({super.key});

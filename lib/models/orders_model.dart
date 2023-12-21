@@ -1,4 +1,5 @@
-import 'package:ismmart_dubai_pos/models/order.dart';
+
+import 'order.dart';
 
 class Orders {
   int? id;

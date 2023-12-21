@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ismmart_dubai_pos/helper/constants.dart';
-
+import '../../helper/constants.dart';
 import '../../widgets/custom_buttons.dart';
 import '../../widgets/custom_textfield.dart';
 import '../../widgets/scrollable_column.dart';

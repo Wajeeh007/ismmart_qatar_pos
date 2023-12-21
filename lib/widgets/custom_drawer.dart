@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ismmart_dubai_pos/screens/cashier_shift_report/cashier_shift_report_view.dart';
+import '../screens/cashier_shift_report/cashier_shift_report_view.dart';
 import '../screens/login/login_view.dart';
 import '../screens/order_history/order_history_view.dart';
 import '../screens/sales_summary/sales_summary_view.dart';

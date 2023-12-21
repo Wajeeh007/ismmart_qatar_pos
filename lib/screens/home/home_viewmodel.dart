@@ -925,9 +925,9 @@ class HomeViewModel extends GetxController with WindowListener {
                             productItem2(
                               itemName,
                             ),
-                            // productItem2(
-                            //   receiptData['Items'][index]['SaleValue'],
-                            // ),
+                            productItem2(
+                              receiptData['Items'][index]['SaleValue'],
+                            ),
                             productItem2(
                               receiptData['Items'][index]['Quantity'],
                             ),

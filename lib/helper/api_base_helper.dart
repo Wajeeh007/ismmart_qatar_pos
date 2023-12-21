@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:get_storage/get_storage.dart';
 import 'package:http/http.dart' as http;
-import 'package:ismmart_dubai_pos/helper/constants.dart';
-import 'package:ismmart_dubai_pos/helper/urls.dart';
+import 'package:ismmart_qatar_pos/helper/urls.dart';
+import 'constants.dart';
 import 'errors.dart';
 
 class ApiBaseHelper {

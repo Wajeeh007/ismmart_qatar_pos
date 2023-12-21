@@ -1,4 +1,4 @@
-import 'package:ismmart_dubai_pos/models/order.dart';
+import '../../models/order.dart';
 
 class ShiftReportResponse {
   final List<Order>? orders;
