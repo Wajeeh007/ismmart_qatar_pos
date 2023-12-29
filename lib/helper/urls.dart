@@ -9,8 +9,8 @@ class Urls {
 
   //live----------
   static String liveBaseUrl =
-      'https://aacb5b-4.myshopify.com/admin/api/2023-10/';
-  static String liveToken = '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';
+      'https://d1f5bf-2.myshopify.com/admin/api/2023-10';
+  static String liveToken = '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';
 
   static String liveCustomBaseUrl = 'https://shopify.ismmart.com/api/';
 
