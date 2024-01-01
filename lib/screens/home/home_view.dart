@@ -102,6 +102,12 @@ class HomeView extends StatelessWidget {
               for (var element in viewModel.allProducts) {
                 int variantIndex = element.product!.variants!
                     .indexWhere((variant) => variant.barcode == value);
+                if(element == viewModel.allProducts.last && variantIndex == -1){
+                  AppConstants.displaySnackBar('Error', 'No item associated with this barcode');
+                  viewModel.searchTextController.clear();
+                  viewModel.focusNode.requestFocus();
+                  return;
+                }
                 if (variantIndex == -1) {
                   continue;
                 } else {
