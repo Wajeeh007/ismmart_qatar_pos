@@ -306,7 +306,7 @@ class OrderDetailScreen extends StatelessWidget {
                       )
                           : const SizedBox(),
                       Text(
-                        'Rs ${viewModel.refundItemsList[index].cartModel?.price}',
+                        'QAR ${viewModel.refundItemsList[index].cartModel?.price}',
                         style: const TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w500,
