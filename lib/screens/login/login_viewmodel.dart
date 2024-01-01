@@ -13,6 +13,9 @@ class LoginViewModel extends GetxController {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   Future<void> login() async {
+
+    GlobalVariables.showLoader.value = true;
+
     Map<String, dynamic> param = {
       "email": emailController.text.toString(),
       "password": passController.text.toString()
@@ -21,18 +24,19 @@ class LoginViewModel extends GetxController {
     ApiBaseHelper()
         .customPostMethod(url: Urls.login, body: param)
         .then((parsedJson) async {
-      print("login  ======>>>>>> $parsedJson");
       if (parsedJson['success'] == true) {
         String token = parsedJson["data"]['token'] ?? "";
         await GetStorage().write("token", token);
         await getUserProfile();
       } else {
+        GlobalVariables.showLoader.value = false;
         AppConstants.displaySnackBar(
           'Error',
           'Login Failed.',
         );
       }
     }).catchError((e) {
+      GlobalVariables.showLoader.value = false;
       AppConstants.displaySnackBar(
         'Error',
         e,
@@ -46,6 +50,7 @@ class LoginViewModel extends GetxController {
         .getMethodFrmCustomApi(url: Urls.profile, withAuthorization: true)
         .then((parsedJson) async {
       if (parsedJson['success'] == true) {
+        GlobalVariables.showLoader.value = false;
         GlobalVariables.locationId.value = int.parse(
             parsedJson['data']['location']['location']['id'].toString());
         GlobalVariables.locationName.value =
@@ -64,6 +69,7 @@ class LoginViewModel extends GetxController {
         );
       }
     }).catchError((e) {
+      GlobalVariables.showLoader.value = false;
       AppConstants.displaySnackBar(
         'Error',
         e,

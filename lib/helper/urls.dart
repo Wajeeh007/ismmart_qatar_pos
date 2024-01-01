@@ -9,14 +9,13 @@ class Urls {
 
   //live----------
   static String liveBaseUrl =
-      'https://d1f5bf-2.myshopify.com/admin/api/2023-10';
+      'https://d1f5bf-2.myshopify.com/admin/api/2023-10/';
   static String liveToken = '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';
 
   static String liveCustomBaseUrl = 'https://shopify.ismmart.com/api/';
 
 //end point--------
   static String getAllProducts = 'products.json';
-  // static String getAllProducts = 'products.json?limit=250';
   static String getProductsByLimit = 'products.json?limit=250&since_id=';
   static String getOrders =
       'orders.json?status=any&current_total_price,created_at,id,name,variant_title,first_name,status,refunds&limit=25&since_id=,location_id';

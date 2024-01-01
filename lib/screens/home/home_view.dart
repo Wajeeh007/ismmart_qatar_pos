@@ -99,11 +99,11 @@ class HomeView extends StatelessWidget {
             ),
             onFieldSubmitted: (value) {
               viewModel.productsToShow.addAll(viewModel.allProducts.map((element) => element));
-              viewModel.allProducts.forEach((element) {
+              for (var element in viewModel.allProducts) {
                 int variantIndex = element.product!.variants!
                     .indexWhere((variant) => variant.barcode == value);
                 if (variantIndex == -1) {
-                  return;
+                  continue;
                 } else {
                   int productIndex = viewModel.productsInCart.indexWhere(
                           (element1) =>
@@ -112,14 +112,7 @@ class HomeView extends StatelessWidget {
                     viewModel.productsInCart.add(
                       CartModel(
                         name: element.product?.title,
-                        price: element.product?.variants![variantIndex]
-                            .price,
-                        // priceWithoutTax: element.product!
-                        //     .variants![variantIndex].priceWithoutTax!,
-                        // productTax: element.product!.variants![variantIndex]
-                        //     .price! -
-                        //     element.product!.variants![variantIndex]
-                        //         .priceWithoutTax!,
+                        price: element.product?.variants![variantIndex].price,
                         variantTitle:
                         element.product?.variants?[variantIndex].title,
                         quantity: 1,
@@ -132,16 +125,6 @@ class HomeView extends StatelessWidget {
                             ?.variants?[variantIndex].inventoryQuantity,
                         inventoryItemId: element
                             .product?.variants?[variantIndex].inventoryItemId,
-                        taxLines: <TaxLines>[
-                          TaxLines(
-                              title: 'VAT',
-                              price: (element.product!.variants![variantIndex]
-                                  .price! -
-                                  element.product!.variants![variantIndex]
-                                      .priceWithoutTax!)
-                                  .toStringAsFixed(2),
-                              rate: 0.05)
-                        ],
                         properties: <Properties>[
                           Properties(name: 'Inventory Item ID',
                               value: element.product!.variants![variantIndex]
@@ -162,16 +145,16 @@ class HomeView extends StatelessWidget {
                     viewModel.focusNode.requestFocus();
                   }
                 }
-              });
+              }
             },
             onChanged: (value) {
               if (value == '' ||
                   value.isEmpty ||
                   viewModel.searchTextController.text.isEmpty) {
                 viewModel.productsToShow.clear();
-                viewModel.allProducts.forEach((element) {
+                for (var element in viewModel.allProducts) {
                   viewModel.productsToShow.add(element);
-                });
+                }
               } else {
                 final valueSplitted = value.split("-");
                 if (valueSplitted.length > 2) {
@@ -180,13 +163,13 @@ class HomeView extends StatelessWidget {
                   }
                 } else {
                   viewModel.productsToShow.clear();
-                  viewModel.allProducts.forEach((element) {
+                  for (var element in viewModel.allProducts) {
                     if (element.product!.title!
                         .toLowerCase()
                         .contains(value.toLowerCase())) {
                       viewModel.productsToShow.add(element);
                     }
-                  });
+                  }
                 }
               }
             },
@@ -1115,7 +1098,7 @@ class HomeView extends StatelessWidget {
                                                   viewModel.productVariantStrings[index1] = value;
                                                   viewModel.productVariantStrings.refresh();
                                                   viewModel.productVariant.value = '';
-                                                  viewModel.productVariantStrings.forEach((element) {
+                                                  for (var element in viewModel.productVariantStrings) {
                                                     if (element == viewModel.productVariantStrings.first) {
                                                       viewModel.productVariant.value = element;
                                                     } else {
@@ -1141,7 +1124,7 @@ class HomeView extends StatelessWidget {
                                                         }
                                                       }
                                                     }
-                                                  });
+                                                  }
                                                 }),
                                           );
                                         },
